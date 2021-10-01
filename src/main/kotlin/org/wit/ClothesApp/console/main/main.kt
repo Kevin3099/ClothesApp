@@ -1,3 +1,9 @@
+// TODO validation on add/update
+// ID changes on Deletion fix other id's
+// Make the filter methods
+// make search by title method
+// Import Tornado
+
 package org.wit.placemark.console.main
 
 import mu.KotlinLogging
@@ -18,12 +24,13 @@ fun main(args: Array<String>) {
         input = menu()
         when(input) {
             1 -> addClothing()
-//            2 -> updateClothing()
-//            3 -> listAllClothing()
-//            4 -> ListFilteredByTypeClothing()
-//            5 -> ListFilteredByPriceClothing()
-//            6 -> searchById()
-//            7 -> searchByTitle()
+            2 -> updateClothing()
+            3 -> listAllClothing()
+            4 -> deleteClothing()
+            5 -> filterClothingByType()
+            6 -> filterClothingByPrice()
+            7 -> searchClothingById()
+            8 -> searchClothingByTitle()
             -99 -> dummyData()
             -1 -> println("Exiting App")
             else -> println("Invalid Option")
@@ -42,10 +49,11 @@ fun menu() : Int {
     println(" 1. Add Clothing")
     println(" 2. Update Clothing")
     println(" 3. List All Clothing")
-    println(" 4. ListFilteredByTypeClothing")
-    println(" 5. ListFilteredByPriceClothing")
-    println(" 4. Search Clothing By Id")
-    println(" 4. Search Clothing by Title")
+    println(" 4. Delete a Piece of Clothing")
+    println(" 5. ListFilteredByTypeClothing")
+    println(" 6. ListFilteredByPriceClothing")
+    println(" 7. Search Clothing By Id")
+    println(" 8. Search Clothing by Title")
     println("-1. Exit")
     println()
     print("Enter Option : ")
@@ -83,7 +91,7 @@ fun addClothing(){
 }
 
 fun updateClothing() {
-    println("Update Placemark")
+    println("Update Clothing")
     println()
     listAllClothing()
     var searchId = getId()
@@ -103,33 +111,80 @@ fun updateClothing() {
         else{
             print("No new information added description is: ${Clothing.description}")
         }
+        print("Enter a new Type of Clothing for [ " + Clothing.clothingType + " ] : ")
+        if(readLine() !=""){
+            Clothing.clothingType = readLine()!!
+        }
+        else{
+            print("No new information added Clothing Type is: ${Clothing.clothingType}")
+        }
+        print("Enter a new Price for [ " + Clothing.price + " ] : ")
+        if(readLine() !=""){
+            Clothing.price = myScanner.nextDouble()
+        }
+        else{
+            print("No new Price detected the price is: ${Clothing.price}")
+        }
+        print("Enter a new Image URL for [ " + Clothing.image + " ] : ")
+        if(readLine() !=""){
+            Clothing.image = readLine()!!
+        }
+        else{
+            print("No new Image URL detected the URL is: ${Clothing.image}")
+        }
         println(
             "You updated [ " + Clothing.title + " ] for title " +
-                    "and [ " + Clothing.description + " ] for description"
+                    "and [ " + Clothing.description + " ] for description" +
+                    "and [ $" + Clothing.price + " ] for price" +
+                    "and [ " + Clothing.clothingType + " ] for type" +
+                    "and [ " + Clothing.image + " ] for image"
         )
     }
     else
-        println("Placemark Not Updated...")
+        println("Clothing Not Updated...")
 }
 
 fun listAllClothing() {
-    println("List All Placemarks")
-    println()
+    println("List All Clothing Items")
+    println(clothingList)
     clothingList.forEach { logger.info("${it}") }
     println()
+}
+fun deleteClothing(){
+    var id = -1
+    println("Delete a Clothing Item")
+    listAllClothing()
+    println("Please type the ID of the clothing you want to delete: ")
+    id = myScanner.nextInt()!!
+    clothingList.removeAt(id)
+
+    //Changing ID Numbers
+    for( clothing in clothingList){
+        if(clothing.id > id){
+            clothing.id = clothing.id -1
+        }
+    }
 }
 
 fun searchClothingById() {
 
     var searchId = getId()
-    val aPlacemark = searchById(searchId)
+    val Clothing = searchById(searchId)
 
-    if(aPlacemark != null)
-        println("Placemark Details [ $aPlacemark ]")
+    if(Clothing != null)
+        println("Clothing Details [ $Clothing ]")
     else
-        println("Placemark Not Found...")
+        println("Clothing Not Found...")
 }
+fun searchClothingByTitle(){
 
+}
+fun filterClothingByType(){
+
+}
+fun filterClothingByPrice(){
+
+}
 fun getId() : Long {
     var strId : String? // String to hold user input
     var searchId : Long // Long to hold converted id
