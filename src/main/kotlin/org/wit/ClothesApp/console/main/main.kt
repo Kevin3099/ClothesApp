@@ -1,8 +1,8 @@
-// TODO validation on add/update
-// ID changes on Deletion fix other id's
+// add price try catch
 // Make the filter methods
 // make search by title method
 // Import Tornado
+// Saving and Loading From JSON
 
 package org.wit.placemark.console.main
 
@@ -69,19 +69,26 @@ fun addClothing(){
     var Clothing = ClothingModel()
     println("Add Clothing")
     println()
-    //TODO ADD VALIDATION
     print("Enter a Title : ")
     Clothing.title = readLine()!!
+
     print("Enter a Description : ")
     Clothing.description = readLine()!!
+
     print("Enter a Price (eg. 20.99) : ")
-    Clothing.price = myScanner.nextDouble()
-    print("Enter a Type Of Clothing : ")
+        Clothing.price = myScanner.nextDouble()
+
+    print("The Types of Clothing are: Shoe, Shirt, Pants, Hat, Hoodie. Please Enter a Type Of Clothing : ")
     Clothing.clothingType = readLine()!!
+
     print("Please Link an Image URL : ")
     Clothing.image = readLine()!!
 
-    if (Clothing.title.isNotEmpty() && Clothing.description.isNotEmpty()) {
+//Validation
+    if ((Clothing.title.isNotEmpty() && Clothing.title.length < 250) && (Clothing.description.isNotEmpty() && Clothing.description.length <= 400) && (Clothing.price != 0.00)
+        && (Clothing.clothingType.uppercase().equals("SHOES") || Clothing.clothingType.uppercase().equals("PANTS") || Clothing.clothingType.uppercase().equals("HAT")
+                || Clothing.clothingType.uppercase().equals("HOODIE")
+                ||Clothing.clothingType.uppercase().equals("SHIRT")) && (Clothing.image.contains("https://"))) {
         Clothing.id = clothingList.size.toLong()
         clothingList.add(Clothing.copy())
         logger.info("Clothing Added : [ $Clothing ]")
@@ -99,34 +106,36 @@ fun updateClothing() {
 
     if(Clothing != null) {
         print("Enter a new Title for [ " + Clothing.title + " ] : ")
-        if(readLine() != ""){
+        if(readLine() != "" && readLine()!!.length < 250){
             Clothing.title = readLine()!!}
         else {
             print("No new information added title is: ${Clothing.title}")
         }
         print("Enter a new Description for [ " + Clothing.description + " ] : ")
-        if(readLine() !=""){
+        if(readLine() !="" && readLine()!!.length < 300){
             Clothing.description = readLine()!!
         }
         else{
             print("No new information added description is: ${Clothing.description}")
         }
         print("Enter a new Type of Clothing for [ " + Clothing.clothingType + " ] : ")
-        if(readLine() !=""){
+        if(readLine() !="" && (readLine()!!.uppercase().equals("SHOE") || readLine()!!.uppercase().equals("HOODIE")
+                    || readLine()!!.uppercase().equals("SHIRT")|| readLine()!!.uppercase().equals("PANTS")||
+                    readLine()!!.uppercase().equals("HAT"))){
             Clothing.clothingType = readLine()!!
         }
         else{
-            print("No new information added Clothing Type is: ${Clothing.clothingType}")
+            print("No new information added or incorrect Clothing Type current clothing type is: ${Clothing.clothingType}")
         }
         print("Enter a new Price for [ " + Clothing.price + " ] : ")
         if(readLine() !=""){
             Clothing.price = myScanner.nextDouble()
         }
         else{
-            print("No new Price detected the price is: ${Clothing.price}")
+            print("No new Price detected the price is: $ ${Clothing.price}")
         }
         print("Enter a new Image URL for [ " + Clothing.image + " ] : ")
-        if(readLine() !=""){
+        if(readLine() !="" && readLine()!!.contains("https://")){
             Clothing.image = readLine()!!
         }
         else{
