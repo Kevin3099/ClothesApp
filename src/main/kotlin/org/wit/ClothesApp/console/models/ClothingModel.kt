@@ -1,4 +1,4 @@
-package org.wit.placemark.console.models
+package org.wit.ClothesApp.console.models
 
 data class ClothingModel(var id: Long = 0,
                           var clothingType: String = "",
