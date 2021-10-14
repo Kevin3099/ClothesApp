@@ -13,8 +13,8 @@ class ClothingView {
         println("MAIN MENU")
         println(" 1. Add Clothing")
         println(" 2. Update Clothing")
-        println(" 3. List All Clothings")
-        println(" 4. Search Clothings")
+        println(" 3. List All Clothing")
+        println(" 4. Search Clothing")
         println(" 5. Delete Clothing")
         println("-1. Exit")
         println()
@@ -27,8 +27,8 @@ class ClothingView {
         return option
     }
 
-    fun listClothings(clothings : ClothingJSONStore) {
-        println("List All Clothings")
+    fun listClothing(clothings : ClothingJSONStore) {
+        println("List All Clothing")
         println()
         clothings.logAll()
         println()

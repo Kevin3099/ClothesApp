@@ -3,7 +3,7 @@ package org.wit.ClothesApp.console.controllers
 import mu.KotlinLogging
 import org.wit.ClothesApp.console.models.ClothingJSONStore
 import org.wit.ClothesApp.console.views.ListClothingScreen
-import org.wit.ClothesApp.console.views.AddClothingscreen
+import org.wit.ClothesApp.console.views.AddClothingScreen
 import org.wit.ClothesApp.console.views.MenuScreen
 import org.wit.ClothesApp.console.models.ClothingModel
 
@@ -22,7 +22,7 @@ class ClothingUIController : Controller() {
 
         var aClothing = ClothingModel(title = _title, description = _description)
             clothing.create(aClothing)
-            logger.info("Placemark Added")
+            logger.info("Clothing Added")
     }
 
     fun loadListScreen() {
@@ -34,13 +34,13 @@ class ClothingUIController : Controller() {
 
     fun loadAddScreen() {
         runLater {
-            find(MenuScreen::class).replaceWith(AddClothingscreen::class, sizeToScene = true, centerOnScreen = true)
+            find(MenuScreen::class).replaceWith(AddClothingScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
     fun closeAdd() {
         runLater {
-            find(AddClothingscreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+            find(AddClothingScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
     fun closeList() {

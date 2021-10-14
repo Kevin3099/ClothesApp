@@ -10,7 +10,7 @@ class MenuScreen : View("Clothing Main Menu") {
     val clothingUIController: ClothingUIController by inject()
 
     override val root = form {
-        setPrefSize(400.0, 200.0)
+        setPrefSize(600.0, 400.0)
         fieldset(labelPosition = Orientation.VERTICAL) {
             text("")
             button("Add Clothing") {
@@ -23,14 +23,44 @@ class MenuScreen : View("Clothing Main Menu") {
                     }
                 }
             }
+            button("Update Clothing") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        clothingUIController.loadAddScreen()
+                    }
+                }
+            }
+            button("Delete Clothing") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        clothingUIController.loadAddScreen()
+                    }
+                }
+            }
             text("")
-            button("List Clothings") {
+            button("List Clothing") {
 
                 isDefaultButton = true
                 useMaxWidth = true
                 action {
                     runAsyncWithProgress {
                         clothingUIController.loadListScreen()
+                    }
+                }
+            }
+            button("Search/Filter Clothing") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        clothingUIController.loadAddScreen()
                     }
                 }
             }

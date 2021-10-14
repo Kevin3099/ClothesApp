@@ -4,7 +4,7 @@ import org.wit.ClothesApp.console.controllers.ClothingUIController
 import org.wit.ClothesApp.console.models.ClothingModel
 import tornadofx.*
 
-class ListClothingScreen : View("List Clothings") {
+class ListClothingScreen : View("List Clothing") {
 
     val clothingUIController: ClothingUIController by inject()
     val tableContent = clothingUIController.clothing.findAll()

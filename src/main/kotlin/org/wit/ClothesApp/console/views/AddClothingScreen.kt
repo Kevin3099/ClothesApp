@@ -6,7 +6,7 @@ import org.wit.ClothesApp.console.controllers.ClothingUIController
 import tornadofx.*
 import kotlin.reflect.KClass
 
-class AddClothingscreen : View("Add Clothing") {
+class AddClothingScreen : View("Add Clothing") {
     val model = ViewModel()
     val _title = model.bind { SimpleStringProperty() }
     val _description = model.bind { SimpleStringProperty() }

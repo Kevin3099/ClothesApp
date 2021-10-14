@@ -49,12 +49,12 @@ class ClothingController {
     }
 
     fun list() {
-        ClothingView.listClothings(clothing)
+        ClothingView.listClothing(clothing)
     }
 
     fun update() {
 
-        ClothingView.listClothings(clothing)
+        ClothingView.listClothing(clothing)
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
@@ -72,14 +72,14 @@ class ClothingController {
     }
 
     fun delete() {
-        ClothingView.listClothings(clothing)
+        ClothingView.listClothing(clothing)
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
         if(aClothing != null) {
             clothing.delete(aClothing)
             println("Clothing Deleted...")
-            ClothingView.listClothings(clothing)
+            ClothingView.listClothing(clothing)
         }
         else
             println("Clothing Not Deleted...")
