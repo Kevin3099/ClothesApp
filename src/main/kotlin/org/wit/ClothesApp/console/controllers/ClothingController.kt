@@ -85,7 +85,7 @@ class ClothingController {
     }
 
     fun listByTitle() {
-        ClothingView.listByTitleClothing(clothing)
+        ClothingView.findByTitleClothing(clothing)
     }
 
 

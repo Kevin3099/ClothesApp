@@ -58,11 +58,6 @@ class AddClothingScreen : View("Add Clothing") {
                     }
                 }
             }
-            label("Clothing Failed to add"){
-                if(logging){
-                    isDisabled
-                }
-            }
         }
     }
     override fun onDock() {

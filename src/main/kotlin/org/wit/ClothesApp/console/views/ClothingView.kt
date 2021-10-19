@@ -39,9 +39,9 @@ class ClothingView {
         println()
     }
 
-    fun listByTitleClothing(clothing : ClothingJSONStore) {
+    fun findByTitleClothing(clothing : ClothingJSONStore) {
         var title: String?
-        print("Enter title to find all clothing with that title : ")
+        print("Enter title to find first clothing with that title : ")
         title = readLine()!!
         println(clothing.findByTitle(title))
     }
