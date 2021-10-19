@@ -7,6 +7,7 @@ import javafx.geometry.Orientation
 import javafx.scene.paint.Color
 import org.wit.ClothesApp.console.controllers.ClothingUIController
 import tornadofx.*
+import java.util.*
 import kotlin.reflect.KClass
 
 class AddClothingScreen : View("Add Clothing") {

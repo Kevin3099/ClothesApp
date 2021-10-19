@@ -5,14 +5,6 @@ import org.junit.jupiter.api.Test
 internal class ClothingViewTest {
 
     @Test
-    fun getMyScanner() {
-    }
-
-    @Test
-    fun menu() {
-    }
-
-    @Test
     fun listAllClothing() {
     }
 

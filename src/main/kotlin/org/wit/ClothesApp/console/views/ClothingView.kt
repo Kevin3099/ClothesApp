@@ -1,6 +1,5 @@
 package org.wit.ClothesApp.console.views
 
-import jdk.nashorn.internal.objects.NativeArray.forEach
 import org.wit.ClothesApp.console.models.ClothingJSONStore
 import org.wit.ClothesApp.console.models.ClothingModel
 import java.util.*
@@ -16,9 +15,9 @@ class ClothingView {
         println(" 1. Add Clothing")
         println(" 2. Update Clothing")
         println(" 3. List All Clothing")
-        println("4. list All Clothing By Title")
-        println("5. List All Clothing of Specific Type (Filtered by Type)")
-        println("6. List All Clothing at a Specific Price (Filtered by Price")
+        println(" 4. List All Clothing By Title")
+        println(" 5. List All Clothing of Specific Type (Filtered by Type)")
+        println(" 6. List All Clothing at a Specific Price (Filtered by Price")
         println(" 7. Search Clothing")
         println(" 8. Delete Clothing")
         println("-1. Exit")

@@ -4,22 +4,6 @@ import org.junit.jupiter.api.Assertions.*
 
 internal class ClothingJSONStoreTest {
 
-    @org.junit.jupiter.api.BeforeEach
-    fun setUp() {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    fun tearDown() {
-    }
-
-    @org.junit.jupiter.api.Test
-    fun getClothing() {
-    }
-
-    @org.junit.jupiter.api.Test
-    fun setClothing() {
-    }
-
     @org.junit.jupiter.api.Test
     fun getFilteredTypeClothing() {
     }
@@ -66,9 +50,5 @@ internal class ClothingJSONStoreTest {
 
     @org.junit.jupiter.api.Test
     fun delete() {
-    }
-
-    @org.junit.jupiter.api.Test
-    fun `logAll$ClothesApp_main`() {
     }
 }

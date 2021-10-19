@@ -5,6 +5,9 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import org.wit.ClothesApp.console.models.ClothingJSONStore
+import org.wit.ClothesApp.console.models.ClothingModel
+import org.wit.ClothesApp.console.views.ClothingView
 
 internal class ClothingControllerTest {
 
@@ -17,27 +20,14 @@ internal class ClothingControllerTest {
     }
 
     @Test
-    fun getClothing() {
-    }
-
-    @Test
-    fun getClothingView() {
-    }
-
-    @Test
-    fun getLogger() {
-    }
-
-    @Test
-    fun start() {
-    }
-
-    @Test
-    fun menu() {
-    }
-
-    @Test
     fun add() {
+//    var clothing : ClothingModel
+//    val ClothingView = ClothingView()
+//    var clothingList : List<ClothingModel>
+//
+//    clothingList = ClothingView.addClothingData(clothing)
+//
+//    assertEquals(clothingList.size, 1)
     }
 
     @Test
