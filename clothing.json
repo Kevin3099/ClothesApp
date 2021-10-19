@@ -1,0 +1,58 @@
+[
+  {
+    "id": -8734416407008742054,
+    "clothingType": "SHIRT",
+    "title": "dfrgt",
+    "price": 23.0,
+    "description": "fdgth",
+    "image": "https://"
+  },
+  {
+    "id": -8963518308357801975,
+    "clothingType": "shoes",
+    "title": "hi",
+    "price": 20.0,
+    "description": "hi",
+    "image": "https://"
+  },
+  {
+    "id": -3712448991343593687,
+    "clothingType": "shoes",
+    "title": "hii",
+    "price": 20.0,
+    "description": "hiii",
+    "image": "https://"
+  },
+  {
+    "id": 5991075168248530913,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": 1630726267251540559,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": -7716233070619579079,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": 4998869081388389603,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  }
+]

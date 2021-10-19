@@ -14,6 +14,8 @@ internal fun getId(): Long {
 class ClothingMemStore : ClothingStore {
 
     val clothing = ArrayList<ClothingModel>()
+    var filteredTypeClothing = mutableListOf<ClothingModel>()
+    var filteredPriceClothing = mutableListOf<ClothingModel>()
 
     override fun findAll(): List<ClothingModel> {
         return clothing
@@ -22,6 +24,28 @@ class ClothingMemStore : ClothingStore {
     override fun findOne(id: Long) : ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.id == id }
         return foundClothing
+    }
+    override fun findByTitle(title: String): ClothingModel? {
+        var foundClothing: ClothingModel? = clothing.find { p -> p.title == title }
+        return foundClothing
+    }
+
+    override fun filterByType(clothingType: String) :MutableList<ClothingModel> {
+        clothing.forEach{
+            if(it.clothingType.equals(clothingType)){
+                filteredTypeClothing.add(it)
+            }
+        }
+        return filteredTypeClothing
+    }
+
+    override fun filterByPrice(price : Double) :MutableList<ClothingModel>  {
+        clothing.forEach{
+            if(it.price == price){
+                filteredPriceClothing.add(it)
+            }
+        }
+        return filteredPriceClothing
     }
 
     override fun create(Clothing: ClothingModel) {
