@@ -53,10 +53,13 @@ class ClothingView {
         println(clothing.filterByType(type))
     }
     fun filteredByPriceClothing(clothing : ClothingJSONStore){
-        var price: Double?
-        print("Enter Clothing Price : ")
-        price = myScanner.nextDouble();
-        println(clothing.filterByPrice(price))
+        var lowPrice: Double?
+        var highPrice: Double?
+        print("Enter Minimum Clothing Price : ")
+        lowPrice = myScanner.nextDouble()
+        print("Enter Maximum Clothing Price : ")
+        highPrice = myScanner.nextDouble()
+        println(clothing.filterByPrice(lowPrice,highPrice))
     }
 
     fun showClothing(clothing : ClothingModel) {

@@ -53,9 +53,9 @@ class ClothingJSONStore : ClothingStore {
         return filteredTypeClothing
     }
 
-    override fun filterByPrice(price : Double) :MutableList<ClothingModel>  {
+    override fun filterByPrice(lowPrice : Double, highPrice: Double) :MutableList<ClothingModel>  {
         clothing.forEach{
-            if(it.price == price){
+            if(it.price in lowPrice..highPrice){
                 filteredPriceClothing.add(it)
             }
         }
