@@ -16,13 +16,22 @@ class ClothingUIController : Controller() {
     val logger = KotlinLogging.logger {}
 
     init {
-        logger.info { "Launching Placemark TornadoFX UI App" }
+        logger.info { "Launching Clothing TornadoFX UI App" }
     }
-    fun add(_title : String, _description : String){
+    fun add(_title : String, _description : String, _clothingType: String, _price : Double, _image: String): Boolean {
 
-        var aClothing = ClothingModel(title = _title, description = _description)
+        var aClothing = ClothingModel(title = _title, description = _description, clothingType = _clothingType, price = _price, image = _image)
+          if ((_title.isNotEmpty() && _title.length < 250) && (_description.isNotEmpty() && _description.length <= 400)
+             && (_image.contains("https://"))) {
+
             clothing.create(aClothing)
             logger.info("Clothing Added")
+          return true
+          }
+        else{
+            logger.info("Clothing not Added, Are all the details correct?")
+              return false
+        }
     }
 
     fun loadListScreen() {

@@ -6,8 +6,6 @@ import com.google.gson.reflect.TypeToken
 import mu.KotlinLogging
 
 import org.wit.ClothesApp.console.helpers.*
-import org.wit.ClothesApp.console.models.ClothingStore
-import org.wit.ClothesApp.console.models.ClothingModel
 import java.util.*
 
 private val logger = KotlinLogging.logger {}
@@ -23,6 +21,8 @@ fun generateRandomId(): Long {
 class ClothingJSONStore : ClothingStore {
 
     var clothing = mutableListOf<ClothingModel>()
+    var filteredTypeClothing = mutableListOf<ClothingModel>()
+    var filteredPriceClothing = mutableListOf<ClothingModel>()
 
     init {
         if (exists(JSON_FILE)) {
@@ -37,6 +37,29 @@ class ClothingJSONStore : ClothingStore {
     override fun findOne(id: Long) : ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.id == id }
         return foundClothing
+    }
+
+    override fun findByTitle(title: String): ClothingModel? {
+        var foundClothing: ClothingModel? = clothing.find { p -> p.title == title }
+        return foundClothing
+    }
+
+    override fun filterByType(clothingType: String) :MutableList<ClothingModel> {
+        clothing.forEach{
+          if(it.clothingType.equals(clothingType)){
+              filteredTypeClothing.add(it)
+          }
+        }
+        return filteredTypeClothing
+    }
+
+    override fun filterByPrice(lowPrice : Double, highPrice: Double) :MutableList<ClothingModel>  {
+        clothing.forEach{
+            if(it.price in lowPrice..highPrice){
+                filteredPriceClothing.add(it)
+            }
+        }
+        return filteredPriceClothing
     }
 
     override fun create(Clothing: ClothingModel) {

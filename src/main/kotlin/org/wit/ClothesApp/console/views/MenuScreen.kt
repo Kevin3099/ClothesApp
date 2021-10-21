@@ -23,6 +23,7 @@ class MenuScreen : View("Clothing Main Menu") {
                     }
                 }
             }
+            text("")
             button("Update Clothing") {
 
                 isDefaultButton = true
@@ -33,6 +34,7 @@ class MenuScreen : View("Clothing Main Menu") {
                     }
                 }
             }
+            text("")
             button("Delete Clothing") {
 
                 isDefaultButton = true
@@ -54,6 +56,7 @@ class MenuScreen : View("Clothing Main Menu") {
                     }
                 }
             }
+            text("")
             button("Search/Filter Clothing") {
 
                 isDefaultButton = true

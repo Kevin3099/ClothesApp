@@ -25,9 +25,12 @@ class ClothingController {
             when (input) {
                 1 -> add()
                 2 -> update()
-                3 -> list()
-                4 -> search()
-                5 -> delete()
+                3 -> listById()
+                4 -> listByTitle()
+                5 -> listFilteredByType()
+                6 -> listFilteredByPrice()
+                7 -> search()
+                8 -> delete()
                 -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -42,19 +45,21 @@ class ClothingController {
     fun add(){
         var aClothing = ClothingModel()
 
-        if (ClothingView.addClothingData(aClothing))
+        if (ClothingView.addClothingData(aClothing)){
             clothing.create(aClothing)
+        logger.info("Clothing Added")
+        }
         else
             logger.info("Clothing Not Added")
     }
 
-    fun list() {
-        ClothingView.listClothing(clothing)
+    fun listById() {
+        ClothingView.listAllClothing(clothing)
     }
 
     fun update() {
 
-        ClothingView.listClothing(clothing)
+        ClothingView.listAllClothing(clothing)
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
@@ -71,15 +76,28 @@ class ClothingController {
             println("Clothing Not Updated...")
     }
 
+    fun listFilteredByType(){
+        ClothingView.filteredByTypeClothing(clothing)
+    }
+
+    fun listFilteredByPrice(){
+        ClothingView.filteredByPriceClothing(clothing)
+    }
+
+    fun listByTitle() {
+        ClothingView.findByTitleClothing(clothing)
+    }
+
+
     fun delete() {
-        ClothingView.listClothing(clothing)
+        ClothingView.listAllClothing(clothing)
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
         if(aClothing != null) {
             clothing.delete(aClothing)
             println("Clothing Deleted...")
-            ClothingView.listClothing(clothing)
+            ClothingView.listAllClothing(clothing)
         }
         else
             println("Clothing Not Deleted...")

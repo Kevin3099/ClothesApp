@@ -1,0 +1,346 @@
+[
+  {
+    "id": -8734416407008742054,
+    "clothingType": "SHIRT",
+    "title": "dfrgt",
+    "price": 23.0,
+    "description": "fdgth",
+    "image": "https://"
+  },
+  {
+    "id": -8963518308357801975,
+    "clothingType": "shoes",
+    "title": "hi",
+    "price": 20.0,
+    "description": "hi",
+    "image": "https://"
+  },
+  {
+    "id": -3712448991343593687,
+    "clothingType": "shoes",
+    "title": "hii",
+    "price": 20.0,
+    "description": "hiii",
+    "image": "https://"
+  },
+  {
+    "id": 5991075168248530913,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": 1630726267251540559,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": -7716233070619579079,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": 4998869081388389603,
+    "clothingType": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hi]",
+    "title": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: hiiiiii]",
+    "price": 23.0,
+    "description": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: safdfgjkhlk;fgfd]",
+    "image": "StringProperty [bean: tornadofx.ViewModel@5ac34d68, value: https://]"
+  },
+  {
+    "id": -2049593434197067033,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 40573939392922718,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -2523238574248953843,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 160084614923108379,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -8249083076287975071,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -4815954263819994872,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -6374620646622474972,
+    "clothingType": "shoes",
+    "title": "testing",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 1253536457494395996,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -7698233423040826435,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 4623766865960962976,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 7733914004850600497,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 2695149589269395316,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -1909461862331563132,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 1226314833486982615,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 3196673434785970705,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 6261957155831815637,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -7664464944288306577,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -3802837797584509717,
+    "clothingType": "shoes",
+    "title": "testing",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -7906421793239409897,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 2274966725108525195,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 6046200825011162407,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -2556062535082713213,
+    "clothingType": "shoes",
+    "title": "testing",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -5305560807997159393,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 325713508635959849,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -1814020623426602322,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -824628666703929554,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 8265005044415578522,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 7206158198377085033,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -2795067564493931655,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 4374637693700012394,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -802820793765929708,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -7365226962462792584,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -6687025167415241182,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -8340503471303363260,
+    "clothingType": "shoes",
+    "title": "testing",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": 502459249375405197,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  },
+  {
+    "id": -7280474865644418799,
+    "clothingType": "shoes",
+    "title": "Hii",
+    "price": 29.99,
+    "description": "Hii Description",
+    "image": "https://image"
+  }
+]
