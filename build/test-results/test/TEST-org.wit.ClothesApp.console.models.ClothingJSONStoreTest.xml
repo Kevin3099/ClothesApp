@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-10-21T15:36:04" hostname="DESKTOP-IUI78BU" time="1.399">
+<testsuite name="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-10-22T11:34:32" hostname="DESKTOP-IUI78BU" time="0.087">
   <properties/>
   <testcase name="create" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.014"/>
-  <testcase name="delete" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.326"/>
-  <testcase name="findAll" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.669"/>
-  <testcase name="findOne" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.007"/>
-  <testcase name="update" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.013"/>
-  <testcase name="findByTitle" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.008"/>
-  <testcase name="filterByType" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.004"/>
+  <testcase name="delete" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.017"/>
+  <testcase name="findAll" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.004"/>
+  <testcase name="findOne" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.005"/>
+  <testcase name="update" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.01"/>
+  <testcase name="findByTitle" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.003"/>
+  <testcase name="filterByType" classname="org.wit.ClothesApp.console.models.ClothingJSONStoreTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

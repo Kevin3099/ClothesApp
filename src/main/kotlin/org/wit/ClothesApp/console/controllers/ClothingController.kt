@@ -40,16 +40,17 @@ class ClothingController {
         logger.info { "Shutting Down Clothing Console App" }
     }
 
-    fun menu() :Int { return ClothingView.menu() }
+    fun menu(): Int {
+        return ClothingView.menu()
+    }
 
-    fun add(){
+    fun add() {
         var aClothing = ClothingModel()
 
-        if (ClothingView.addClothingData(aClothing)){
+        if (ClothingView.addClothingData(aClothing)) {
             clothing.create(aClothing)
-        logger.info("Clothing Added")
-        }
-        else
+            logger.info("Clothing Added")
+        } else
             logger.info("Clothing Not Added")
     }
 
@@ -63,24 +64,22 @@ class ClothingController {
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
-        if(aClothing != null) {
-            if(ClothingView.updateClothingData(aClothing)) {
+        if (aClothing != null) {
+            if (ClothingView.updateClothingData(aClothing)) {
                 clothing.update(aClothing)
                 ClothingView.showClothing(aClothing)
                 logger.info("Clothing Updated : [ $aClothing ]")
-            }
-            else
+            } else
                 logger.info("Clothing Not Updated")
-        }
-        else
+        } else
             println("Clothing Not Updated...")
     }
 
-    fun listFilteredByType(){
+    fun listFilteredByType() {
         ClothingView.filteredByTypeClothing(clothing)
     }
 
-    fun listFilteredByPrice(){
+    fun listFilteredByPrice() {
         ClothingView.filteredByPriceClothing(clothing)
     }
 
@@ -94,12 +93,11 @@ class ClothingController {
         var searchId = ClothingView.getId()
         val aClothing = search(searchId)
 
-        if(aClothing != null) {
+        if (aClothing != null) {
             clothing.delete(aClothing)
             println("Clothing Deleted...")
             ClothingView.listAllClothing(clothing)
-        }
-        else
+        } else
             println("Clothing Not Deleted...")
     }
 
@@ -109,14 +107,14 @@ class ClothingController {
     }
 
 
-    fun search(id: Long) : ClothingModel? {
+    fun search(id: Long): ClothingModel? {
         var foundClothing = clothing.findOne(id)
         return foundClothing
     }
 
     fun dummyData() {
         clothing.create(ClothingModel(title = "New York New York", description = "So Good They Named It Twice"))
-        clothing.create(ClothingModel(title= "Ring of Kerry", description = "Some place in the Kingdom"))
+        clothing.create(ClothingModel(title = "Ring of Kerry", description = "Some place in the Kingdom"))
         clothing.create(ClothingModel(title = "Waterford City", description = "You get great Blaas Here!!"))
     }
 }

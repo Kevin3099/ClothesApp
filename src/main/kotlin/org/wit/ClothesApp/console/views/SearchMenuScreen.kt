@@ -31,5 +31,4 @@ class SearchMenuScreen : View("Clothing Main Menu") {
     }
 
 
-
 }

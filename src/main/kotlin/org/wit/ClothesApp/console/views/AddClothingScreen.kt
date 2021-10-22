@@ -46,7 +46,13 @@ class AddClothingScreen : View("Add Clothing") {
                 useMaxWidth = true
                 action {
                     runAsyncWithProgress {
-                            logging = clothingUIController.add(_title.toString(),_description.toString(), _clothingType.toString(), _price.getValue().toDouble(), _image.toString())
+                        logging = clothingUIController.add(
+                            _title.value.toString(),
+                            _description.value.toString(),
+                            _clothingType.value.toString(),
+                            _price.getValue().toDouble(),
+                            _image.value.toString()
+                        )
                         logging
                     }
                 }
@@ -61,6 +67,7 @@ class AddClothingScreen : View("Add Clothing") {
             }
         }
     }
+
     override fun onDock() {
         _title.value = ""
         _description.value = ""
