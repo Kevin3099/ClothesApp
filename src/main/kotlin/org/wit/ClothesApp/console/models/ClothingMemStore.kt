@@ -21,27 +21,28 @@ class ClothingMemStore : ClothingStore {
         return clothing
     }
 
-    override fun findOne(id: Long) : ClothingModel? {
+    override fun findOne(id: Long): ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.id == id }
         return foundClothing
     }
+
     override fun findByTitle(title: String): ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.title == title }
         return foundClothing
     }
 
-    override fun filterByType(clothingType: String) :MutableList<ClothingModel> {
-        clothing.forEach{
-            if(it.clothingType.equals(clothingType)){
+    override fun filterByType(clothingType: String): MutableList<ClothingModel> {
+        clothing.forEach {
+            if (it.clothingType.equals(clothingType)) {
                 filteredTypeClothing.add(it)
             }
         }
         return filteredTypeClothing
     }
 
-    override fun filterByPrice(lowPrice : Double, highPrice: Double) :MutableList<ClothingModel>  {
-        clothing.forEach{
-            if(it.price in lowPrice..highPrice){
+    override fun filterByPrice(lowPrice: Double, highPrice: Double): MutableList<ClothingModel> {
+        clothing.forEach {
+            if (it.price in lowPrice..highPrice) {
                 filteredPriceClothing.add(it)
             }
         }

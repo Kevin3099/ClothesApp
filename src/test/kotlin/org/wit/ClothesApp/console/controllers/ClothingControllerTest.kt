@@ -21,13 +21,6 @@ internal class ClothingControllerTest {
 
     @Test
     fun add() {
-//    var clothing : ClothingModel
-//    val ClothingView = ClothingView()
-//    var clothingList : List<ClothingModel>
-//
-//    clothingList = ClothingView.addClothingData(clothing)
-//
-//    assertEquals(clothingList.size, 1)
     }
 
     @Test

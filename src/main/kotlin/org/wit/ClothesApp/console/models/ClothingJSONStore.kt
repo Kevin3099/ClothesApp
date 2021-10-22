@@ -34,32 +34,32 @@ class ClothingJSONStore : ClothingStore {
         return clothing
     }
 
-    override fun findOne(id: Long) : ClothingModel? {
+    override fun findOne(id: Long): ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.id == id }
         return foundClothing
     }
 
     override fun findByTitle(title: String): ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.title == title }
-        logger.info{foundClothing}
+        logger.info { foundClothing }
         return foundClothing
     }
 
-    override fun filterByType(clothingType: String) :MutableList<ClothingModel> {
-        clothing.forEach{
-          if(it.clothingType.equals(clothingType, ignoreCase = true)){
-              filteredTypeClothing.add(it)
-              logger.info{ it}
-          }
+    override fun filterByType(clothingType: String): MutableList<ClothingModel> {
+        clothing.forEach {
+            if (it.clothingType.equals(clothingType, ignoreCase = true)) {
+                filteredTypeClothing.add(it)
+                logger.info { it }
+            }
         }
         return filteredTypeClothing
     }
 
-    override fun filterByPrice(lowPrice : Double, highPrice: Double) :MutableList<ClothingModel>  {
-        clothing.forEach{
-            if(it.price in lowPrice..highPrice){
+    override fun filterByPrice(lowPrice: Double, highPrice: Double): MutableList<ClothingModel> {
+        clothing.forEach {
+            if (it.price in lowPrice..highPrice) {
                 filteredPriceClothing.add(it)
-                logger.info{ it}
+                logger.info { it }
             }
         }
         return filteredPriceClothing
@@ -77,7 +77,7 @@ class ClothingJSONStore : ClothingStore {
             foundClothing.title = Clothing.title
             foundClothing.description = Clothing.description
         }
-         serialize()
+        serialize()
     }
 
     override fun delete(Clothing: ClothingModel) {

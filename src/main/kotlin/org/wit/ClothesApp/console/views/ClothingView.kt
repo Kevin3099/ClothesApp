@@ -5,14 +5,16 @@ import org.wit.ClothesApp.console.models.ClothingJSONStore
 import org.wit.ClothesApp.console.models.ClothingModel
 
 import java.util.*
+
 private val logger = KotlinLogging.logger {}
+
 class ClothingView {
     val myScanner = Scanner(System.`in`)
     private val logger = KotlinLogging.logger {}
 
-    fun menu() : Int {
+    fun menu(): Int {
 
-        var option : Int
+        var option: Int
         var input: String?
 
         println("MAIN MENU")
@@ -35,47 +37,47 @@ class ClothingView {
         return option
     }
 
-    fun listAllClothing(clothing : ClothingJSONStore) {
+    fun listAllClothing(clothing: ClothingJSONStore) {
         println("List All Clothing")
         println()
         clothing.logAll()
         println()
     }
 
-    fun findByTitleClothing(clothing : ClothingJSONStore) {
+    fun findByTitleClothing(clothing: ClothingJSONStore) {
         var title: String?
         print("Enter title to find first clothing with that title : ")
         title = readLine()!!
         clothing.findByTitle(title)
     }
 
-    fun filteredByTypeClothing(clothing : ClothingJSONStore){
+    fun filteredByTypeClothing(clothing: ClothingJSONStore) {
         var type: String?
         print("Enter Clothing Type : ")
         type = readLine()!!
 
         clothing.filterByType(type)
     }
-    fun filteredByPriceClothing(clothing : ClothingJSONStore){
+
+    fun filteredByPriceClothing(clothing: ClothingJSONStore) {
         var lowPrice: Double?
         var highPrice: Double?
         print("Enter Minimum Clothing Price : ")
         lowPrice = myScanner.nextDouble()
         print("Enter Maximum Clothing Price : ")
         highPrice = myScanner.nextDouble()
-        clothing.filterByPrice(lowPrice,highPrice)
+        clothing.filterByPrice(lowPrice, highPrice)
     }
 
-    fun showClothing(clothing : ClothingModel) {
-        if(clothing != null)
+    fun showClothing(clothing: ClothingModel) {
+        if (clothing != null)
             println("Clothing Details [ $clothing ]")
         else
             println("Clothing Not Found...")
     }
 
 
-
-    fun addClothingData(clothing : ClothingModel) : Boolean {
+    fun addClothingData(clothing: ClothingModel): Boolean {
 
 
         println("Add Clothing")
@@ -96,16 +98,18 @@ class ClothingView {
         clothing.image = readLine()!!
 
         if ((clothing.title.isNotEmpty() && clothing.title.length < 250) && (clothing.description.isNotEmpty() && clothing.description.length <= 400) && (clothing.price != 0.00)
-            && (clothing.clothingType.toUpperCase().equals("SHOES") || clothing.clothingType.toUpperCase().equals("PANTS") || clothing.clothingType.toUpperCase().equals("HAT")
+            && (clothing.clothingType.toUpperCase().equals("SHOES") || clothing.clothingType.toUpperCase()
+                .equals("PANTS") || clothing.clothingType.toUpperCase().equals("HAT")
                     || clothing.clothingType.toUpperCase().equals("HOODIE")
-                    ||clothing.clothingType.toUpperCase().equals("SHIRT")) && (clothing.image.contains("https://"))) {
+                    || clothing.clothingType.toUpperCase().equals("SHIRT")) && (clothing.image.contains("https://"))
+        ) {
 
             return true
         }
         return false
     }
 
-    fun updateClothingData(clothing : ClothingModel) : Boolean {
+    fun updateClothingData(clothing: ClothingModel): Boolean {
 
         var tempTitle: String?
         var tempDescription: String?
@@ -128,9 +132,11 @@ class ClothingView {
 
 
             if ((clothing.title.isNotEmpty() && clothing.title.length < 250) && (clothing.description.isNotEmpty() && clothing.description.length <= 400) && (clothing.price != 0.00)
-                && (clothing.clothingType.toUpperCase().equals("SHOES") || clothing.clothingType.toUpperCase().equals("PANTS") || clothing.clothingType.toUpperCase().equals("HAT")
+                && (clothing.clothingType.toUpperCase().equals("SHOES") || clothing.clothingType.toUpperCase()
+                    .equals("PANTS") || clothing.clothingType.toUpperCase().equals("HAT")
                         || clothing.clothingType.toUpperCase().equals("HOODIE")
-                        ||clothing.clothingType.toUpperCase().equals("SHIRT")) && (clothing.image.contains("https://"))) {
+                        || clothing.clothingType.toUpperCase().equals("SHIRT")) && (clothing.image.contains("https://"))
+            ) {
 
                 clothing.title = tempTitle
                 clothing.description = tempDescription
