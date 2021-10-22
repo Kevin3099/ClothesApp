@@ -1,11 +1,15 @@
 package org.wit.ClothesApp.console.views
 
+import mu.KotlinLogging
 import org.wit.ClothesApp.console.models.ClothingJSONStore
 import org.wit.ClothesApp.console.models.ClothingModel
-import java.util.*
 
+import java.util.*
+private val logger = KotlinLogging.logger {}
 class ClothingView {
     val myScanner = Scanner(System.`in`)
+    private val logger = KotlinLogging.logger {}
+
     fun menu() : Int {
 
         var option : Int
@@ -42,14 +46,15 @@ class ClothingView {
         var title: String?
         print("Enter title to find first clothing with that title : ")
         title = readLine()!!
-        println(clothing.findByTitle(title))
+        clothing.findByTitle(title)
     }
 
     fun filteredByTypeClothing(clothing : ClothingJSONStore){
         var type: String?
         print("Enter Clothing Type : ")
         type = readLine()!!
-        println(clothing.filterByType(type))
+
+        clothing.filterByType(type)
     }
     fun filteredByPriceClothing(clothing : ClothingJSONStore){
         var lowPrice: Double?
@@ -58,7 +63,7 @@ class ClothingView {
         lowPrice = myScanner.nextDouble()
         print("Enter Maximum Clothing Price : ")
         highPrice = myScanner.nextDouble()
-        println(clothing.filterByPrice(lowPrice,highPrice))
+        clothing.filterByPrice(lowPrice,highPrice)
     }
 
     fun showClothing(clothing : ClothingModel) {

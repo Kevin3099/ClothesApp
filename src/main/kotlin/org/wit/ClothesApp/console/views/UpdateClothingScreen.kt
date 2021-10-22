@@ -36,7 +36,7 @@ class UpdateClothingScreen : View("Update Clothing") {
             field("Description") {
                 textarea(_description).required()
             }
-            button("Add") {
+            button("Update") {
                 enableWhen(model.valid)
                 isDefaultButton = true
                 useMaxWidth = true

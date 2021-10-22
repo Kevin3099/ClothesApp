@@ -41,13 +41,15 @@ class ClothingJSONStore : ClothingStore {
 
     override fun findByTitle(title: String): ClothingModel? {
         var foundClothing: ClothingModel? = clothing.find { p -> p.title == title }
+        logger.info{foundClothing}
         return foundClothing
     }
 
     override fun filterByType(clothingType: String) :MutableList<ClothingModel> {
         clothing.forEach{
-          if(it.clothingType.equals(clothingType)){
+          if(it.clothingType.equals(clothingType, ignoreCase = true)){
               filteredTypeClothing.add(it)
+              logger.info{ it}
           }
         }
         return filteredTypeClothing
@@ -57,6 +59,7 @@ class ClothingJSONStore : ClothingStore {
         clothing.forEach{
             if(it.price in lowPrice..highPrice){
                 filteredPriceClothing.add(it)
+                logger.info{ it}
             }
         }
         return filteredPriceClothing

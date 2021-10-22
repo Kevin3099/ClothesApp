@@ -25,7 +25,6 @@ class ClothingUIController : Controller() {
              && (_image.contains("https://"))) {
 
             clothing.create(aClothing)
-            logger.info("Clothing Added")
           return true
           }
         else{
